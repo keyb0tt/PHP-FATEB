@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTY html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,6 @@
     </form>
 
     <?php
-
         if(isset($_POST["anos"])){
             $anos = $_POST["anos"];
             
