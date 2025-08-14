@@ -17,8 +17,6 @@
                 $distancia = $_POST["distancia"];
                 $gasolinaValor = $_POST["gasolinaValor"];
 
-                $calculo = ($distancia / 12) * $gasolinaValor;
-
                 echo "O valor a ser gasto com combustível em uma viagem de $distancia km será de: R$". number_format((($distancia / 12) * $gasolinaValor),2, ",", ",");
             }
         ?>

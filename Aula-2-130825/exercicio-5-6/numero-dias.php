@@ -8,7 +8,7 @@
 <body>
     <h1>Conversor por número de dias</h1>
     <form method="post">
-        Insira um número de dias:<input type="number" name="dias">
+        Insira um número de dias: <input type="number" name="dias">
         <input type="submit" value="Enviar">
     </form>
 
@@ -17,8 +17,8 @@
         if(isset($_POST["dias"])){
             $dias = $_POST["dias"];
             
-            echo "$dias dias resultam em:". "<br>". number_format(($dias / 7), 2, ",", ","). 
-            "semanas, ". number_format(($dias / 30), 2, ",", ","). " meses e ". 
+            echo "$dias dias resultam em:". "<br>". number_format(($dias / 7),  0,",", ","). 
+            " semanas, ". number_format(($dias / 30), 0, ",", ","). " meses e ". 
             number_format(($dias / 365), 2, ",", ","). " anos";
         } else {
             echo "aguardando envio...";
