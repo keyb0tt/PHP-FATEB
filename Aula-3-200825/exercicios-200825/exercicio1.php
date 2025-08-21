@@ -10,8 +10,8 @@
 <body>
   <h1>Calculadora de média</h1><br>
   <form method="post">
-    Insira sua primeira nota: <input type="number" name="n1"> <br>
-    Insira sua segunda nota: <input type="number" name="n1"> <br>
+    Insira sua primeira nota: <input type="number" name="n1" step="0.1"> <br>
+    Insira sua segunda nota: <input type="number" name="n1" step="0.1"> <br>
     <br><input type="submit" value="Enviar">
   </form>
 
