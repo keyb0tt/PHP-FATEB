@@ -16,25 +16,19 @@
   </form>
 
   <?php
-    if(isset($_POST["lado1"]) + isset($_POST["lado2"]) + isset($_POST["lado3"])){
+    if(isset($_POST["lado1"]) && isset($_POST["lado2"]) && isset($_POST["lado3"])){
       $lado1 = $_POST["lado1"];
       $lado2 = $_POST["lado2"];
       $lado3 = $_POST["lado3"];
 
-      if ($lado1 < ($lado2 + $lado3)) {
-          if ($lado2 < ($lado1 + $lado3)) {
-              if ($lado3 < ($lado1 + $lado2)) {
-                  echo "Pode ser um triângulo!";
-              } else {
-                  echo "<br>Esses lados não podem formar um triângulo";
-              }
+      if ($lado1 < $lado2 + $lado3 && $lado2 < $lado1 + $lado3 && $lado3 < $lado1 + $lado2) {
+        echo "<br>Esses lados podem formar um triângulo";
           } else {
               echo "<br>Esses lados não podem formar um triângulo";
           }
       } else {
           echo "<br>(Aguardando valor...)";
       }
-    }
   ?>
 </body>
 </html>
