@@ -1,3 +1,3 @@
 <?php
-    echo "Texto modificado";
+echo "Texto modificado";
 ?>
