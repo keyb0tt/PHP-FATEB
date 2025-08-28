@@ -8,14 +8,16 @@
 </head>
 
 <body>
-  <h1>Identificador de lados da pirâmide</h1><br>
-  <form method="post">
-    Insira o valor, em cm, dos 3 lados:<br>
-    Lado 1: <input type="number" name="lado1"><br>
-    Lado 2: <input type="number" name="lado2"><br>
-    Lado 3: <input type="number" name="lado3"><br>
-    <input type="submit" value="Enviar">
-  </form>
+  <p class="tituloPrincipal">Identificador de lados da pirâmide</p><br>
+  <div class="formPost">
+    <form method="post">
+      <p>Insira o valor, em cm, dos 3 lados:</p><br>
+      <input type="number" name="lado1" placeholder="Lado 1"><br>
+      <input type="number" name="lado2" placeholder="Lado 2"><br>
+      <input type="number" name="lado3" placeholder="Lado 3"><br>
+      <input type="submit" class="inputSubmit" value="Enviar">
+    </form>
+  </div>
 
   <?php
   if (isset($_POST["lado1"]) && isset($_POST["lado2"]) && isset($_POST["lado3"])) {
@@ -28,10 +30,34 @@
     } else {
       echo "<br>Esses lados não podem formar um triângulo";
     }
-  } else {
-    echo "<br>(Aguardando valor...)";
   }
-  ?>
+?>
 </body>
 
 </html>
+
+<style>
+  .tituloPrincipal{
+    font-size: 36px;
+    margin: 0;
+    padding-top: 12px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .formPost{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .inputSubmit{
+    width: 185px;
+    margin: 0;
+  }
+
+  p{
+    margin: 0;
+  }
+</style>
